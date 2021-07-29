@@ -43,8 +43,8 @@ const Reader = () => {
             ui: 'full', // embed, full (responsive)
           
         };
-        var br = new BookReader(options);
-        br.init();
+        // var br = new BookReader(options);
+        // br.init();
     })
     
     return (
