@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@craco/craco": "^6.2.0",
+    "@headlessui/react": "^1.4.0",
+    "@heroicons/react": "^1.0.3",
     "@internetarchive/bookreader": "^5.0.0-14",
     "@react-pdf/renderer": "^2.0.17",
     "@testing-library/jest-dom": "^5.14.1",

@@ -1,42 +1,28 @@
 import React, { useState} from "react";
 
 const UserDropdown = () => {
-    const [showDropdown, setDropdown] = useState<Boolean>(false);
+    const [menu, setMenu] = useState(false)
 
     return(
         <>
-            <div onClick={()=>setDropdown(!showDropdown)} className="shadow w-full">
-                <div className="flex justify-center float-right space-x-3 cursor-pointer">
-                    <div className="font-semibold text-white text-lg my-auto">
-                        <div className="cursor-pointer">Hello, Jessica</div>
-                    </div>
-                    <div className="w-12 h-12 rounded-full overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1610397095767-84a5b4736cbd?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80" alt="" className="w-full h-full object-cover"/>
-                    </div>
-                    {showDropdown && 
-                        <div className="absolute w-48 px-5 py-3 dark:bg-gray-800 bg-white rounded-lg shadow border dark:border-transparent mt-14">
-                            <ul className="space-y-3 dark:text-white">
-                                <li className="font-medium">
-                                    <a href="#" className="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
-                                        <div className="mr-3">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                                        </div>
-                                        Settings
-                                    </a>
-                                </li>
-                                <li className="font-medium">
-                                    <a href="#" className="flex items-center transform transition-colors duration-200 border-r-4 border-transparent hover:border-indigo-700">
-                                        <div className="mr-3">
-                                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-                                        </div>
-                                        Logout
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    }
+            <nav>
+                <div className="ml-3">
+                <div>
+                    <button type="button" className="float-right max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-menu-button" aria-expanded="false" aria-haspopup="true" onClick={(e) => {setMenu(!menu)}}>
+                    <img className="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""/>
+                    </button>
                 </div>
-            </div>
+                {menu && 
+                    <div className="origin-top-right absolute right-0 mt-10 transition duration-150 ease-out w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button">
+                        <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:text-blue-700">Your Profile</a>
+
+                        <a href="#" className="block px-4 py-2 text-sm text-gray-700">Settings</a>
+
+                        <a href="#" className="block px-4 py-2 text-sm text-gray-700">Sign out</a>
+                    </div>
+                }      
+                </div>
+            </nav>
         </>
     )
   };
