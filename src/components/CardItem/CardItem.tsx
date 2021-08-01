@@ -16,7 +16,7 @@ const CardItem =({image, title, author, url}:CardItemProps) =>{
             </div>
             <div className="space-y-4">
                 <a href={url} rel="noreferrer" target="_blank">
-                    <h3 className="text-sm font-bold truncate">{title}</h3>
+                    <h3 className="text-sm font-bold h-20">{title}</h3>
                 </a>
             </div>
             <div className="mb-6">
