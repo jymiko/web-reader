@@ -4,9 +4,9 @@ import CardItem from "./components/CardItem/CardItem";
 export default function Dashboard () {
     return(
         <>
-            <div className="pt-4 pb-8">
-                <input type="search" placeholder="Search" className="bg-gray-200 p-2 w-80 placeholder-gray-500 placeholder-opacity-50 rounded-full focus:outline-none"/>
-            </div>
+            <form className="pt-4 pb-8">
+                <input type="search" placeholder="Search" className="px-5 bg-gray-100 p-2 w-80 placeholder-gray-500 placeholder-opacity-50 rounded-full focus:outline-none"/>
+            </form>
             <div className="flex grid lg:grid-cols-6 lg:gap-4 md:grid-cols-3 md:gap-10 sm:grid-cols-3 grid-cols-1 gap-8 mx-14 sm:mx-auto">
                 <CardItem
                     image="https://s3-ap-southeast-1.amazonaws.com/ebook-covers/62602/thumb_image_highres/BLK_T1BHDTDSK2R22021839260.jpg"
