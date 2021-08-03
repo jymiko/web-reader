@@ -16,6 +16,7 @@
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.9",
     "glider-js": "^1.7.7",
+    "pspdfkit": "^2021.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
