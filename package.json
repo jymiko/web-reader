@@ -19,6 +19,7 @@
     "pspdfkit": "^2021.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-reader": "^0.20.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typescript": "^4.3.5",
