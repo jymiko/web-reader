@@ -30,12 +30,12 @@ class Reader extends Component {
         {/* <button className="App-button" onClick={this.openAnother}>
           Open another document
         </button> */}
-        {/* <div className="PDF-viewer">
+        <div className="PDF-viewer">
         <PDFComponent
           document={this.state.document}
         />
-        </div> */}
-        <Epub/>
+        </div>
+        {/* <Epub/> */}
       </div>
     );
   }
